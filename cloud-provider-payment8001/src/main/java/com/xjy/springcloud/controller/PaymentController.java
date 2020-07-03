@@ -7,7 +7,6 @@ import com.xjy.springcloud.entities.Payment;
 import com.xjy.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -42,4 +41,10 @@ public class PaymentController {
             return new CommonResult(200,"没有记录"+id,null);
         }
     }
+
+    @GetMapping(value="/payment/lb")
+    public String getPaymentLb(){
+        return serverPort;
+    }
+
 }
