@@ -1,0 +1,22 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          skipSslValidation: true
+          uri: https://github.com/kthas/spring-cloud-config
+          search-paths:
+            - spring-cloud-config
+          username: 1226486517@qq.com
+          password: xjyxjy1515
+      label: master
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
